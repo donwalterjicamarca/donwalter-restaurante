@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Don Walter - Restaurante | Carta Virtual</title>
+    <meta name="description" content="Carta virtual de Don Walter: Caja China, Pachamanca, Patasca y más. Pide por WhatsApp con delivery en Jicamarca Anexo 8 o recojo en local. Atendemos los domingos de 8 a. m. a 6 p. m.">
+    <meta name="theme-color" content="#b91c1c">
+    <link rel="icon" type="image/webp" href="fotos/logo.webp">
+    <link rel="apple-touch-icon" href="fotos/logo.webp">
+
+    <!-- Al compartir el enlace por WhatsApp / Facebook -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:title" content="Don Walter - Carta Virtual">
+    <meta property="og:description" content="Caja China, Pachamanca y Patasca. Pide por WhatsApp: delivery en Jicamarca Anexo 8 o recojo en local. Domingos de 8 a. m. a 6 p. m.">
+    <meta property="og:image" content="https://i.imgur.com/aU6rJIp.jpeg">
+
+    <!-- Datos estructurados para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Don Walter Restaurante",
+      "image": "https://i.imgur.com/aU6rJIp.jpeg",
+      "telephone": "+51930839923",
+      "servesCuisine": ["Peruana", "Pachamanca", "Caja China"],
+      "priceRange": "S/ 2 - S/ 90",
+      "areaServed": "Jicamarca Anexo 8, San Antonio de Huarochirí, Lima, Perú",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "18:00" }
+      ],
+      "hasMenu": true,
+      "acceptsReservations": false
+    }
+    </script>
+
+    <!-- Conexiones tempranas para cargar más rápido -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Fuente (solo los pesos usados) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Poppins', system-ui, sans-serif; -webkit-tap-highlight-color: transparent; }
+        button { cursor: pointer; }
+        button:disabled { cursor: not-allowed; }
+        .no-scrollbar { scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        @keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.25); } 100% { transform: scale(1); } }
+        .pop { animation: pop .3s ease; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-28 lg:pb-0">
+
+    <!-- Íconos (reemplazan a Font Awesome: mucho más liviano) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+        <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M10 20v-6h4v6"/></symbol>
+        <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+        <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+        <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></symbol>
+        <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+    </svg>
+
+    <!-- HEADER (compacto y fijo) -->
+    <header id="siteHeader" class="bg-amber-400 text-slate-900 shadow-md sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-3 py-2 sm:px-4 sm:py-3 flex flex-wrap items-center gap-x-3 gap-y-2 sm:gap-4">
+            <!-- Logo y título -->
+            <div class="order-1 flex-1 min-w-0 flex items-center gap-3">
+                <div class="w-11 h-11 sm:w-14 sm:h-14 shrink-0 bg-white rounded-full overflow-hidden shadow-lg border-2 border-white">
+                    <img src="fotos/logo.webp" alt="Logo de Don Walter" width="56" height="56" class="w-full h-full object-cover" decoding="async" fetchpriority="high">
+                </div>
+                <div class="min-w-0">
+                    <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-red-700 leading-none">Don Walter</h1>
+                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-800 flex items-center">
+                        <span id="hdrDot" class="inline-block w-2 h-2 rounded-full bg-slate-500 mr-1.5"></span>
+                        <span id="hdrStatus">Restaurante</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Buscador -->
+            <div class="order-3 sm:order-2 relative w-full sm:w-72 sm:flex-none">
+                <label for="searchInput" class="sr-only">Buscar plato o bebida</label>
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 pointer-events-none">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-search"/></svg>
+                </span>
+                <input type="search" id="searchInput" autocomplete="off" placeholder="Buscar plato o bebida..." class="w-full pl-10 pr-4 py-2 min-h-11 bg-white rounded-full text-base sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-red-600 shadow-inner">
+            </div>
+
+            <!-- Botón de pedido (solo celular / tablet) -->
+            <button type="button" id="headerCartBtn" aria-label="Ver mi pedido" class="order-2 sm:order-3 lg:hidden relative bg-red-600 hover:bg-red-700 text-white px-4 min-h-11 rounded-full font-bold flex items-center gap-2 shadow-lg transition active:scale-95">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cart"/></svg>
+                <span class="hidden md:inline">Pedido</span>
+                <span id="cartCount" class="bg-amber-400 text-slate-900 text-xs font-extrabold min-w-6 text-center px-1.5 py-0.5 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="bg-gradient-to-r from-red-700 to-red-900 text-white py-6 sm:py-8 px-4 text-center shadow-inner">
+        <div class="max-w-3xl mx-auto space-y-3">
+            <span class="inline-block bg-amber-400 text-slate-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-widest">Sabor a Leña y Tradición</span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">¡Pide tu plato favorito y recíbelo caliente!</h2>
+            <p class="text-red-100 text-sm sm:text-base">Delivery en aprox. 30 minutos. Pagos por Yape, Plin o efectivo.</p>
+
+            <div id="statusBadge" class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-slate-200 text-slate-800">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clock"/></svg>
+                <span id="statusText">Revisando horario...</span>
+            </div>
+
+            <ul class="flex flex-wrap justify-center gap-2 text-xs sm:text-sm text-red-50 pt-1">
+                <li class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clock"/></svg>
+                    Domingos de 8:00 a. m. a 6:00 p. m.
+                </li>
+                <li class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-truck"/></svg>
+                    <span id="chipDelivery">Delivery solo en Jicamarca Anexo 8</span>
+                </li>
+                <li class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-store"/></svg>
+                    Recojo en local
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="max-w-7xl mx-auto px-4 py-6 sm:py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- CATÁLOGO -->
+        <div class="lg:col-span-2">
+            <div class="flex items-center justify-between gap-2 pb-2 border-b border-slate-200">
+                <h2 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-utensils"/></svg>
+                    Nuestra Carta
+                </h2>
+                <div class="flex items-center bg-white border border-slate-200 rounded-full p-1 shadow-sm" role="group" aria-label="Forma de ver la carta">
+                    <button type="button" id="viewGridBtn" data-view="grid" class="px-3 min-h-9 rounded-full text-xs font-bold transition flex items-center gap-1" aria-label="Ver en cuadrícula">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-grid"/></svg>
+                        <span class="hidden sm:inline">Cuadrícula</span>
+                    </button>
+                    <button type="button" id="viewListBtn" data-view="list" class="px-3 min-h-9 rounded-full text-xs font-bold transition flex items-center gap-1" aria-label="Ver en lista">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-list"/></svg>
+                        <span class="hidden sm:inline">Lista</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categorías (quedan fijas al bajar) -->
+            <nav id="catNav" aria-label="Categorías" class="sticky z-20 bg-slate-50/95 backdrop-blur -mx-4 px-4 py-2" style="top: var(--hh, 64px)">
+                <div id="catList" class="flex overflow-x-auto gap-2 no-scrollbar"></div>
+            </nav>
+
+            <div id="menuContainer" class="mt-4 space-y-8"></div>
+        </div>
+
+        <!-- PEDIDO: panel lateral en computadora, hoja deslizable en celular -->
+        <div class="lg:col-span-1">
+            <div id="cartBackdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+
+            <aside id="cartPanel" aria-label="Tu pedido"
+                class="fixed inset-x-0 bottom-0 z-50 max-h-[92dvh] overflow-y-auto overscroll-contain bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 translate-y-full invisible
+                       lg:visible lg:translate-y-0 lg:sticky lg:inset-x-auto lg:bottom-auto lg:top-[calc(var(--hh,64px)+1rem)] lg:max-h-[calc(100dvh-var(--hh,64px)-2rem)] lg:rounded-2xl lg:shadow-xl lg:border lg:border-slate-100">
+
+                <div class="sticky top-0 z-10 bg-white flex items-center justify-between gap-2 px-5 pt-4 pb-3 border-b border-slate-100">
+                    <h2 class="text-lg font-extrabold text-slate-900 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cart"/></svg>
+                        Tu Pedido
+                    </h2>
+                    <div class="flex items-center gap-1">
+                        <button type="button" id="clearCartBtn" class="text-xs text-red-600 font-semibold px-2 min-h-10 hover:underline">Vaciar</button>
+                        <button type="button" id="cartCloseBtn" aria-label="Cerrar pedido" class="lg:hidden w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="px-5 py-4">
+                    <!-- Productos -->
+                    <div id="cartItemsList" class="divide-y divide-slate-100"></div>
+
+                    <!-- Sugerencias -->
+                    <div id="cartSuggest" class="hidden mt-3 p-3 rounded-xl bg-amber-50 border border-amber-200">
+                        <p class="text-xs font-bold text-amber-900 mb-2">¿Le agregas una bebida?</p>
+                        <div id="cartSuggestBtns" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Tipo de entrega -->
+                    <fieldset class="mt-5">
+                        <legend class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">¿Cómo lo quieres?</legend>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="fulfil" value="delivery" class="peer sr-only" checked>
+                                <div class="h-full rounded-xl border-2 border-slate-200 p-3 text-center text-sm font-bold text-slate-600 peer-checked:border-red-600 peer-checked:bg-red-50 peer-checked:text-red-700 peer-focus-visible:ring-2 peer-focus-visible:ring-red-600">
+                                    <svg class="w-5 h-5 mx-auto mb-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-truck"/></svg>
+                                    Delivery
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="fulfil" value="pickup" class="peer sr-only">
+                                <div class="h-full rounded-xl border-2 border-slate-200 p-3 text-center text-sm font-bold text-slate-600 peer-checked:border-red-600 peer-checked:bg-red-50 peer-checked:text-red-700 peer-focus-visible:ring-2 peer-focus-visible:ring-red-600">
+                                    <svg class="w-5 h-5 mx-auto mb-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-store"/></svg>
+                                    Recojo en local
+                                </div>
+                            </label>
+                        </div>
+                        <p id="fulfilInfo" class="mt-2 text-xs text-slate-500"></p>
+                    </fieldset>
+
+                    <!-- Totales -->
+                    <div class="space-y-2 mt-5 pt-3 border-t border-slate-100 text-sm">
+                        <div class="flex justify-between text-slate-600">
+                            <span>Subtotal</span>
+                            <span id="subtotalText" class="font-bold">S/ 0.00</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span id="deliveryLabel">Delivery</span>
+                            <span id="deliveryText" class="font-bold">S/ 0.00</span>
+                        </div>
+                        <p id="deliveryHint" class="hidden text-xs text-emerald-700 font-semibold"></p>
+                        <div class="flex justify-between text-base font-extrabold text-slate-900 pt-2 border-t border-slate-200">
+                            <span>Total a pagar</span>
+                            <span id="totalText" class="text-red-600">S/ 0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Datos -->
+                    <div class="mt-6 space-y-4">
+                        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tus datos</h3>
+
+                        <div>
+                            <label for="clientName" class="text-sm font-semibold text-slate-700 block mb-1">Nombre y apellido</label>
+                            <input type="text" id="clientName" autocomplete="name" placeholder="Ej: Juan Pérez" class="w-full px-3 min-h-12 bg-slate-50 border border-slate-200 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-red-600">
+                            <p id="err-name" class="hidden text-xs text-red-600 font-semibold mt-1"></p>
+                        </div>
+
+                        <div>
+                            <label for="clientPhone" class="text-sm font-semibold text-slate-700 block mb-1">Número de celular</label>
+                            <input type="tel" id="clientPhone" inputmode="tel" autocomplete="tel-national" maxlength="15" placeholder="Ej: 987 654 321" class="w-full px-3 min-h-12 bg-slate-50 border border-slate-200 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-red-600">
+                            <p id="err-phone" class="hidden text-xs text-red-600 font-semibold mt-1"></p>
+                        </div>
+
+                        <div id="addressBlock" class="space-y-3">
+                            <div>
+                                <label for="clientAddress" class="text-sm font-semibold text-slate-700 block mb-1">Dirección y referencia</label>
+                                <input type="text" id="clientAddress" autocomplete="street-address" placeholder="Calle, Mz., Lt. y una referencia" class="w-full px-3 min-h-12 bg-slate-50 border border-slate-200 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-red-600">
+                                <p id="err-address" class="hidden text-xs text-red-600 font-semibold mt-1"></p>
+                            </div>
+                            <div>
+                                <label class="flex items-start gap-3 text-sm text-slate-700 cursor-pointer">
+                                    <input type="checkbox" id="zoneConfirm" class="mt-0.5 w-5 h-5 shrink-0 accent-red-600">
+                                    <span>Confirmo que mi dirección está en <strong>Jicamarca Anexo 8</strong> (San Antonio de Huarochirí).</span>
+                                </label>
+                                <p id="err-zone" class="hidden text-xs text-red-600 font-semibold mt-1"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="paymentMethod" class="text-sm font-semibold text-slate-700 block mb-1">Método de pago</label>
+                            <select id="paymentMethod" class="w-full px-3 min-h-12 bg-slate-50 border border-slate-200 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-red-600">
+                                <option value="Yape">Yape</option>
+                                <option value="Plin">Plin</option>
+                                <option value="Efectivo">Efectivo</option>
+                            </select>
+
+                            <div id="payDigital" class="mt-2 p-3 rounded-lg bg-violet-50 border border-violet-200 text-sm text-violet-900">
+                                <p>Paga al número <strong id="payNumberText"></strong> y envía la <strong>captura del pago</strong> por el mismo chat de WhatsApp.</p>
+                            </div>
+
+                            <div id="payCash" class="hidden mt-2">
+                                <label for="cashAmount" class="text-sm font-semibold text-slate-700 block mb-1">¿Con cuánto pagas? <span class="font-normal text-slate-400">(opcional)</span></label>
+                                <input type="text" id="cashAmount" inputmode="decimal" placeholder="Ej: 50" class="w-full px-3 min-h-12 bg-slate-50 border border-slate-200 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-red-600">
+                                <p class="text-xs text-slate-500 mt-1">Así llevamos tu vuelto exacto.</p>
+                                <p id="err-cash" class="hidden text-xs text-red-600 font-semibold mt-1"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="clientNotes" class="text-sm font-semibold text-slate-700 block mb-1">Indicaciones especiales <span class="font-normal text-slate-400">(opcional)</span></label>
+                            <textarea id="clientNotes" rows="2" placeholder="Ej: Sin habas en la pachamanca, chicha sin helar..." class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-red-600 resize-none"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enviar (siempre visible al final del panel) -->
+                <div class="sticky bottom-0 bg-white border-t border-slate-100 px-5 pt-3 pb-[calc(1rem+env(safe-area-inset-bottom))]">
+                    <div id="closedNote" class="hidden mb-3 p-3 rounded-lg bg-amber-50 border border-amber-200 text-sm text-amber-900 font-semibold"></div>
+                    <button type="button" id="sendBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 disabled:text-slate-500 text-white min-h-12 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition active:scale-95">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg>
+                        <span id="sendBtnText">Enviar pedido por WhatsApp</span>
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white py-8 px-4 mt-12 text-center text-sm space-y-3">
+        <p class="font-bold text-amber-400 text-base">Don Walter Restaurante</p>
+        <p class="text-slate-300">Atendemos todos los domingos de 8:00 a. m. a 6:00 p. m.</p>
+        <p id="footerDelivery" class="text-slate-300">Delivery solo en Jicamarca Anexo 8 - San Antonio de Huarochirí</p>
+        <p id="footerPickup" class="text-slate-300 hidden"></p>
+        <p>
+            <a id="footerPhone" href="#" class="inline-flex items-center gap-2 text-amber-300 font-semibold underline underline-offset-2 min-h-11">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg>
+                <span id="footerPhoneText"></span>
+            </a>
+        </p>
+        <p class="text-xs text-slate-500">© <span id="year"></span> Don Walter - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"
+       class="fixed left-4 lg:left-auto lg:right-4 z-20 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center transition-all" style="bottom: 1.25rem">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg>
+    </a>
+
+    <!-- Barra fija del pedido (celular) -->
+    <div id="cartBar" class="hidden lg:hidden fixed inset-x-0 bottom-0 z-30 px-3 pt-2 pb-[calc(0.75rem+env(safe-area-inset-bottom))] bg-gradient-to-t from-slate-50 via-slate-50/95 to-transparent">
+        <button type="button" id="cartBarBtn" class="w-full bg-red-600 hover:bg-red-700 text-white min-h-14 px-4 rounded-2xl shadow-xl font-bold flex items-center justify-between gap-3 active:scale-[.98] transition">
+            <span class="flex items-center gap-2">
+                <span class="relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cart"/></svg>
+                    <span id="barCount" class="absolute -top-2 -right-2 bg-amber-400 text-slate-900 text-[11px] font-extrabold min-w-5 h-5 px-1 rounded-full flex items-center justify-center">0</span>
+                </span>
+                <span class="pl-1">Ver pedido</span>
+            </span>
+            <span id="barTotal" class="text-base font-extrabold">S/ 0.00</span>
+        </button>
+    </div>
+
+    <!-- Hoja para elegir opciones (sabor, marca, etc.) -->
+    <div id="optModal" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-labelledby="optTitle">
+        <div id="optBackdrop" class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-x-0 bottom-0 sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-full sm:max-w-md bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl max-h-[90dvh] overflow-y-auto p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))]">
+            <div class="flex items-start justify-between gap-3">
+                <div>
+                    <h3 id="optTitle" class="text-lg font-extrabold text-slate-900"></h3>
+                    <p id="optHelp" class="text-sm text-slate-500 mt-0.5"></p>
+                </div>
+                <button type="button" id="optClose" aria-label="Cerrar" class="w-10 h-10 shrink-0 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg>
+                </button>
+            </div>
+            <div id="optPreview" class="hidden mt-4 flex justify-center"><img id="optImg" src="" alt="" width="160" height="160" class="w-40 h-40 object-contain rounded-xl bg-white"></div>
+            <div id="optList" class="mt-4 space-y-2"></div>
+            <button type="button" id="optConfirm" disabled class="mt-5 w-full bg-red-600 hover:bg-red-700 disabled:bg-slate-300 disabled:text-slate-500 text-white min-h-12 rounded-xl font-bold transition active:scale-95">
+                Agregar al pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- Aviso breve -->
+    <div id="toast" role="status" aria-live="polite" class="fixed left-1/2 -translate-x-1/2 bottom-28 lg:bottom-6 z-[70] max-w-[90vw] bg-slate-900 text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-xl opacity-0 pointer-events-none transition-opacity duration-200 flex items-center gap-2"></div>
+
+    <script>
+    /* =====================================================================
+       ZONA EDITABLE  -  aquí cambias precios, horario, números y opciones
+       ===================================================================== */
+    const CONFIG = {
+        phoneIntl: "51930839923",            // WhatsApp de pedidos (con código de país)
+        phoneDisplay: "+51 930 839 923",
+        payNumber: "930 839 923",            // Número al que pagan por Yape / Plin  (CAMBIAR si es otro)
+        deliveryFee: 3.00,
+        freeDeliveryFrom: null,              // Ej: 80  -> delivery gratis desde S/ 80. null = no aplica
+        minOrder: 0,                         // Pedido mínimo en soles. 0 = sin mínimo
+        minDelivery: 10,                     // Pedido mínimo (solo productos) para delivery. 0 = sin mínimo. El recojo no tiene mínimo
+        deliveryZone: "Jicamarca Anexo 8 - San Antonio de Huarochirí",
+        pickupAddress: "Av. Huarochirí Mz. Y Lt. 4", // Dirección del local para recojo. Vacío = no se muestra
+        forceOpen: false,                    // true = ignora el horario (solo para probar la página)
+        allowOrdersWhenClosed: false         // true = deja enviar pedidos aunque esté cerrado
+    };
+
+    // Horario: días 0=domingo, 1=lunes ... 6=sábado. Horas en minutos desde las 00:00 (hora de Lima)
+    const HOURS = {
+        days: [0],
+        open: 8 * 60,
+        close: 18 * 60,
+        openLabel: "8:00 a. m.",
+        closeLabel: "6:00 p. m."
+    };
+
+    // Opciones que el cliente elige al agregar (EDITA estas listas según lo que vendas)
+    const SABORES  = ["Pollo", "Chancho", "Carnero"];
+    const GASEOSAS = ["Inca Kola", "Coca-Cola"];
+    const MATES    = ["Manzanilla", "Anís", "Té"];
+
+    const CATEGORIES = [
+        { id: "caja-china",   name: "Caja China" },
+        { id: "pachamanca",   name: "Pachamanca" },
+        { id: "caldos",       name: "Caldos" },
+        { id: "guarniciones", name: "Guarniciones" },
+        { id: "bebidas",      name: "Bebidas" }
+    ];
+
+    /* Para marcar un producto como agotado agrega:  soldOut: true
+       Para pedir una elección agrega:  options: { title: "...", pick: 1, values: [...] } */
+    const PRODUCTS = [
+        // CAJA CHINA
+        { id: 1, name: "Caja China 150 g", category: "caja-china", price: 20.00, desc: "Panceta y costilla de cerdo. Incluye papa, mote y ensalada.", image: "fotos/caja-china-150.webp" },
+        { id: 2, name: "Caja China 250 g", category: "caja-china", price: 25.00, desc: "Panceta y costilla de cerdo. Incluye papa, mote y ensalada.", image: "fotos/caja-china-250.webp" },
+        { id: 3, name: "Caja China 350 g", category: "caja-china", price: 35.00, desc: "Panceta y costilla de cerdo. Incluye papa, mote y ensalada.", image: "fotos/caja-china-350.webp" },
+        { id: 4, name: "Caja China 500 g", category: "caja-china", price: 45.00, desc: "Panceta y costilla de cerdo. Incluye papa, mote y ensalada.", image: "fotos/caja-china-500.webp" },
+        { id: 5, name: "Caja China 1 kg", category: "caja-china", price: 90.00, desc: "Porción familiar. Incluye guarniciones completas.", image: "fotos/caja-china-1kg.webp" },
+
+        // PACHAMANCA
+        { id: 6, name: "Pachamanca 1 Sabor", category: "pachamanca", price: 25.00, desc: "Elige pollo, chancho o carnero. Incluye papa, camote, habas y humita dulce.", image: "fotos/pachamanca-1-sabor.webp",
+          options: { title: "Elige el sabor", pick: 1, values: SABORES } },
+        { id: 7, name: "Pachamanca 2 Sabores", category: "pachamanca", price: 30.00, desc: "Combinación tradicional con papas y humita. Elige 2 carnes.", image: "fotos/pachamanca-2-sabores.webp",
+          options: { title: "Elige los sabores", pick: 2, values: SABORES } },
+        { id: 8, name: "Pachamanca 3 Sabores", category: "pachamanca", price: 35.00, desc: "Lo mejor de la pachamanca tradicional con 3 carnes.", image: "fotos/pachamanca-3-sabores.webp" },
+
+        // CALDOS
+        { id: 9,  name: "Patasca Grande", category: "caldos", price: 17.00, desc: "Caldo concentrado con mote, panza, mondongo y presa de cordero.", image: "fotos/patasca-grande.webp" },
+        { id: 10, name: "Patasca Mediana", category: "caldos", price: 15.00, desc: "Caldo concentrado con mote y presa.", image: "fotos/patasca-mediana.webp" },
+        { id: 11, name: "Patasca Sola", category: "caldos", price: 10.00, desc: "Caldo reconfortante tradicional.", image: "fotos/patasca-sola.webp" },
+
+        // GUARNICIONES
+        { id: 12, name: "Humita (unidad)", category: "guarniciones", price: 3.00, desc: "Humita artesanal.", image: "fotos/humita-unidad.webp" },
+        { id: 13, name: "Porción de humitas", category: "guarniciones", price: 8.00, desc: "Porción de humitas.", image: "fotos/humita-porcion.webp" },
+        { id: 14, name: "Porción de papa", category: "guarniciones", price: 3.00, desc: "Porción de papa asada.", image: "fotos/papa-porcion.webp" },
+        { id: 15, name: "Porción de camote", category: "guarniciones", price: 3.00, desc: "Porción de camote asado.", image: "fotos/camote-porcion.webp" },
+        { id: 16, name: "Porción de arroz", category: "guarniciones", price: 3.00, desc: "Porción de arroz.", image: "fotos/arroz-porcion.webp" },
+        { id: 17, name: "Ensalada", category: "guarniciones", price: 2.00, desc: "Ensalada fresca criolla.", image: "fotos/ensalada.webp" },
+
+        // BEBIDAS
+        { id: 18, name: "Chicha Morada 1 L", category: "bebidas", price: 12.00, desc: "Chicha morada natural de la casa.", image: "fotos/chicha-morada.webp" },
+        { id: 19, name: "Limonada Frozen 1 L", category: "bebidas", price: 10.00, desc: "Refrescante limonada frozen.", image: "fotos/limonada-frozen.webp" },
+        { id: 20, name: "Chicha de Jora 1 L", category: "bebidas", price: 10.00, desc: "Chicha de jora tradicional.", image: "fotos/chicha-de-jora.webp" },
+        { id: 21, name: "Gaseosa 3 L", category: "bebidas", price: 15.00, desc: "Elige Inca Kola o Coca-Cola. Botella grande familiar.", image: "fotos/gaseosa-3l.webp",
+          options: { title: "Elige la gaseosa", pick: 1, values: GASEOSAS, images: { "Inca Kola": "fotos/gaseosa-3l.webp", "Coca-Cola": "fotos/coca-cola-3l.webp" } } },
+        { id: 22, name: "Gaseosa 1.5 L", category: "bebidas", price: 9.00, desc: "Elige Inca Kola o Coca-Cola. Botella mediana.", image: "fotos/gaseosa-1-5l.webp",
+          options: { title: "Elige la gaseosa", pick: 1, values: GASEOSAS, images: { "Inca Kola": "fotos/gaseosa-1-5l.webp", "Coca-Cola": "fotos/coca-cola-1-5l.webp" } } },
+        { id: 23, name: "Gaseosa 1 L", category: "bebidas", price: 7.00, desc: "Elige Inca Kola o Coca-Cola. Botella de 1 litro.", image: "fotos/gaseosa-1l.webp",
+          options: { title: "Elige la gaseosa", pick: 1, values: GASEOSAS, images: { "Inca Kola": "fotos/gaseosa-1l.webp", "Coca-Cola": "fotos/coca-cola-1l.webp" } } },
+        { id: 24, name: "Gaseosa Personal", category: "bebidas", price: 5.00, desc: "Elige Inca Kola o Coca-Cola. Presentación personal.", image: "fotos/gaseosa-personal.webp",
+          options: { title: "Elige la gaseosa", pick: 1, values: GASEOSAS, images: { "Inca Kola": "fotos/gaseosa-personal.webp", "Coca-Cola": "fotos/coca-cola-personal.webp" } } },
+        { id: 25, name: "Cusqueña", category: "bebidas", price: 10.00, desc: "Cerveza helada.", image: "fotos/cusquena.webp" },
+        { id: 26, name: "Infusiones", category: "bebidas", price: 2.00, desc: "Variedad de mates.", image: "fotos/infusiones.webp",
+          options: { title: "Elige el mate", pick: 1, values: MATES } },
+        { id: 27, name: "Café", category: "bebidas", price: 3.00, desc: "Café pasado.", image: "fotos/cafe.webp" },
+        { id: 28, name: "Agua Mineral", category: "bebidas", price: 2.50, desc: "Botella personal.", image: "fotos/agua-mineral.webp" }
+    ];
+
+    // Bebidas que se sugieren cuando el pedido solo tiene comida (ids de PRODUCTS)
+    const SUGGEST_DRINK_IDS = [18, 19, 20];
+
+    /* =====================================================================
+       FIN DE LA ZONA EDITABLE
+       ===================================================================== */
+
+    const $ = id => document.getElementById(id);
+    const money = n => "S/\u00a0" + n.toFixed(2);
+    const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const norm = s => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const ic = (name, cls = "w-4 h-4") => `<svg class="${cls}" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-${name}"/></svg>`;
+
+    const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#f1f5f9"/><text x="200" y="215" font-size="40" text-anchor="middle" fill="#94a3b8" font-family="sans-serif">Don Walter</text></svg>'
+    );
+
+    const store = {
+        get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+        set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* sin almacenamiento */ } }
+    };
+    const KEY_CART = "dw_cart_v1", KEY_CUSTOMER = "dw_customer_v1", KEY_VIEW = "dw_view_v1";
+
+    const byId = {};
+    PRODUCTS.forEach(p => { byId[p.id] = p; });
+
+    /* ---------- Horario (hora de Lima) ---------- */
+    // <hours-fn>
+    function getLimaNow(date = new Date()) {
+        const parts = new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/Lima", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+        }).formatToParts(date);
+        const get = t => parts.find(p => p.type === t).value;
+        const dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+        return { day: dayMap[get("weekday")], minutes: (parseInt(get("hour"), 10) % 24) * 60 + parseInt(get("minute"), 10) };
+    }
+
+    function getStatus(date = new Date()) {
+        if (CONFIG.forceOpen) return { open: true, label: "Abierto ahora", detail: "" };
+        const { day, minutes } = getLimaNow(date);
+        const isOpenDay = HOURS.days.includes(day);
+        if (isOpenDay && minutes >= HOURS.open && minutes < HOURS.close) {
+            const left = HOURS.close - minutes;
+            return { open: true, label: "Abierto ahora", detail: left <= 30 ? `Cerramos a las ${HOURS.closeLabel}` : `Atendemos hasta las ${HOURS.closeLabel}` };
+        }
+        let next;
+        if (isOpenDay && minutes < HOURS.open) next = `hoy a las ${HOURS.openLabel}`;
+        else if (isOpenDay) next = `el próximo domingo a las ${HOURS.openLabel}`;
+        else next = `el domingo a las ${HOURS.openLabel}`;
+        return { open: false, label: "Cerrado ahora", detail: `Abrimos ${next}` };
+    }
+    // </hours-fn>
+
+    /* ---------- Estado ---------- */
+    let cart = [];              // { key, id, opts: [], qty }
+    let currentCat = "all";
+    let viewMode = "grid";
+    let fulfil = "delivery";    // "delivery" | "pickup"
+    let optState = null;
+    let toastTimer = null;
+
+    const CAT_ON  = "cat-btn bg-red-600 text-white px-4 min-h-11 rounded-full text-sm font-bold whitespace-nowrap shadow transition";
+    const CAT_OFF = "cat-btn bg-white text-slate-700 hover:bg-slate-100 px-4 min-h-11 rounded-full text-sm font-bold whitespace-nowrap shadow transition border border-slate-200";
+    const VIEW_ON  = "px-3 min-h-9 rounded-full text-xs font-bold bg-red-600 text-white transition flex items-center gap-1";
+    const VIEW_OFF = "px-3 min-h-9 rounded-full text-xs font-bold text-slate-600 hover:text-slate-900 transition flex items-center gap-1";
+
+    /* ---------- Aviso ---------- */
+    function toast(msg, ok = true) {
+        const t = $("toast");
+        t.innerHTML = (ok ? ic("check", "w-4 h-4 text-emerald-400") : ic("alert", "w-4 h-4 text-amber-400")) + `<span>${esc(msg)}</span>`;
+        t.classList.remove("opacity-0");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => t.classList.add("opacity-0"), 2200);
+    }
+
+    /* ---------- Vista de la carta ---------- */
+    function setViewMode(mode, save = true) {
+        viewMode = mode;
+        $("viewGridBtn").className = mode === "grid" ? VIEW_ON : VIEW_OFF;
+        $("viewListBtn").className = mode === "list" ? VIEW_ON : VIEW_OFF;
+        $("viewGridBtn").setAttribute("aria-pressed", mode === "grid");
+        $("viewListBtn").setAttribute("aria-pressed", mode === "list");
+        if (save) store.set(KEY_VIEW, mode);
+        renderMenu();
+    }
+
+    function renderCats() {
+        const cats = [{ id: "all", name: "Todo" }, ...CATEGORIES];
+        $("catList").innerHTML = cats.map(c =>
+            `<button type="button" data-cat="${c.id}" class="${c.id === currentCat ? CAT_ON : CAT_OFF}">${esc(c.name)}</button>`
+        ).join("");
+    }
+
+    function setCategory(cat) {
+        currentCat = cat;
+        document.querySelectorAll("#catList .cat-btn").forEach(b => {
+            b.className = b.dataset.cat === cat ? CAT_ON : CAT_OFF;
+            if (b.dataset.cat === cat) b.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+        });
+        renderMenu();
+        const top = $("menuContainer").getBoundingClientRect().top + window.scrollY - $("siteHeader").offsetHeight - $("catNav").offsetHeight - 8;
+        if (window.scrollY > top) window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    function imgTag(p, extra = "") {
+        return `<img src="${esc(p.image)}" alt="${esc(p.name)}" width="400" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover ${extra}" onerror="this.onerror=null;this.src=FALLBACK_IMG">`;
+    }
+
+    function addBtn(p, cls) {
+        if (p.soldOut) return `<button type="button" disabled class="${cls} bg-slate-200 text-slate-500">Agotado</button>`;
+        const label = p.options ? "Elegir" : "Agregar";
+        return `<button type="button" data-add="${p.id}" class="${cls} bg-slate-900 hover:bg-red-600 text-white">${ic("plus", "w-4 h-4")} ${label}</button>`;
+    }
+
+    function cardHTML(p) {
+        const sold = !!p.soldOut;
+        if (viewMode === "grid") {
+            return `
+            <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+                <div class="aspect-square w-full overflow-hidden relative bg-slate-100">
+                    ${imgTag(p, sold ? "grayscale opacity-60" : "")}
+                    <span class="absolute bottom-2 right-2 bg-amber-400 text-slate-900 font-extrabold text-xs px-2.5 py-1 rounded-lg shadow">${money(p.price)}</span>
+                    ${sold ? '<span class="absolute top-2 left-2 bg-slate-900 text-white text-[11px] font-bold px-2 py-1 rounded-md">Agotado</span>' : ""}
+                </div>
+                <div class="p-3 flex-1 flex flex-col">
+                    <h4 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">${esc(p.name)}</h4>
+                    <p class="text-xs text-slate-500 mt-1 line-clamp-3 flex-1">${esc(p.desc)}</p>
+                    ${addBtn(p, "mt-3 w-full min-h-11 py-2 px-3 rounded-xl text-xs sm:text-sm font-bold transition flex items-center justify-center gap-1.5")}
+                </div>
+            </article>`;
+        }
+        return `
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-100 p-3 flex gap-3">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 rounded-xl overflow-hidden relative bg-slate-100">${imgTag(p, sold ? "grayscale opacity-60" : "")}</div>
+            <div class="flex-1 min-w-0 flex flex-col">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">${esc(p.name)}</h4>
+                <p class="text-xs text-slate-500 mt-1 line-clamp-2">${esc(p.desc)}</p>
+                <div class="mt-auto pt-2 flex items-center justify-between gap-2">
+                    <span class="font-extrabold text-red-700">${money(p.price)}</span>
+                    ${addBtn(p, "min-h-10 px-3 rounded-xl text-xs font-bold transition inline-flex items-center gap-1.5")}
+                </div>
+            </div>
+        </article>`;
+    }
+
+    function renderMenu() {
+        const q = norm($("searchInput").value.trim());
+        const list = PRODUCTS.filter(p =>
+            (currentCat === "all" || p.category === currentCat) &&
+            (!q || norm(p.name + " " + p.desc).includes(q))
+        );
+        const container = $("menuContainer");
+        if (!list.length) {
+            container.innerHTML = `<p class="text-center text-slate-400 py-10">No se encontraron platos o bebidas.</p>`;
+            return;
+        }
+        const gridCls = viewMode === "grid" ? "grid grid-cols-2 gap-3 sm:gap-5" : "grid grid-cols-1 gap-3";
+        container.innerHTML = CATEGORIES
+            .map(c => ({ c, items: list.filter(p => p.category === c.id) }))
+            .filter(g => g.items.length)
+            .map(g => `
+                <section aria-labelledby="h-${g.c.id}">
+                    <h3 id="h-${g.c.id}" class="text-lg font-extrabold text-slate-900 mb-3">${esc(g.c.name)}</h3>
+                    <div class="${gridCls}">${g.items.map(cardHTML).join("")}</div>
+                </section>`)
+            .join("");
+    }
+
+    /* ---------- Opciones (sabor, marca...) ---------- */
+    function openOptions(id) {
+        const p = byId[id];
+        const o = p.options;
+        optState = { id, pick: o.pick, values: o.values, chosen: [], images: o.images || null };
+        $("optTitle").textContent = p.name;
+        $("optHelp").textContent = o.pick === 1 ? o.title : `${o.title} (elige ${o.pick})`;
+        if (o.images) { $("optImg").src = p.image; $("optImg").alt = p.name; $("optPreview").classList.remove("hidden"); }
+        else $("optPreview").classList.add("hidden");
+        const type = o.pick === 1 ? "radio" : "checkbox";
+        $("optList").innerHTML = o.values.map(v => `
+            <label class="flex items-center gap-3 p-3 min-h-12 rounded-xl border-2 border-slate-200 cursor-pointer has-[:checked]:border-red-600 has-[:checked]:bg-red-50 has-[:disabled]:opacity-40">
+                <input type="${type}" name="opt" value="${esc(v)}" class="w-5 h-5 accent-red-600">
+                <span class="font-semibold text-sm">${esc(v)}</span>
+            </label>`).join("");
+        $("optConfirm").disabled = true;
+        $("optConfirm").textContent = `Agregar al pedido · ${money(p.price)}`;
+        $("optModal").classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+    }
+
+    function closeOptions() {
+        $("optModal").classList.add("hidden");
+        optState = null;
+        if (!isPanelOpen()) document.body.classList.remove("overflow-hidden");
+    }
+
+    $("optList").addEventListener("change", () => {
+        if (!optState) return;
+        const inputs = [...$("optList").querySelectorAll("input")];
+        const checked = inputs.filter(i => i.checked).map(i => i.value);
+        optState.chosen = checked;
+        if (optState.images && checked.length === 1 && optState.images[checked[0]]) {
+            $("optImg").src = optState.images[checked[0]]; $("optImg").alt = checked[0];
+        }
+        if (optState.pick > 1) inputs.forEach(i => { i.disabled = !i.checked && checked.length >= optState.pick; });
+        $("optConfirm").disabled = checked.length !== optState.pick;
+    });
+    $("optConfirm").addEventListener("click", () => {
+        if (!optState || optState.chosen.length !== optState.pick) return;
+        const ordered = optState.values.filter(v => optState.chosen.includes(v));
+        addToCart(optState.id, ordered);
+        closeOptions();
+    });
+    $("optClose").addEventListener("click", closeOptions);
+    $("optBackdrop").addEventListener("click", closeOptions);
+
+    /* ---------- Carrito ---------- */
+    function handleAdd(id) {
+        const p = byId[id];
+        if (!p || p.soldOut) return;
+        if (p.options) openOptions(id); else addToCart(id, []);
+    }
+
+    function addToCart(id, opts = []) {
+        const p = byId[id];
+        if (!p || p.soldOut) return;
+        const key = id + "|" + opts.join(",");
+        const existing = cart.find(l => l.key === key);
+        if (existing) existing.qty++; else cart.push({ key, id, opts, qty: 1 });
+        updateCartUI();
+        toast(`Agregado: ${p.name}`);
+        [$("cartCount"), $("barCount")].forEach(el => { el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); });
+    }
+
+    function changeQty(key, delta) {
+        const line = cart.find(l => l.key === key);
+        if (!line) return;
+        line.qty += delta;
+        if (line.qty <= 0) cart = cart.filter(l => l.key !== key);
+        updateCartUI();
+    }
+
+    function clearCart() {
+        if (!cart.length) return;
+        if (!confirm("¿Vaciar todo tu pedido?")) return;
+        cart = [];
+        updateCartUI();
+    }
+
+    function totals() {
+        const lines = cart.map(l => ({ ...l, p: byId[l.id] })).filter(l => l.p && !l.p.soldOut);
+        const subtotal = lines.reduce((s, l) => s + l.p.price * l.qty, 0);
+        const count = lines.reduce((s, l) => s + l.qty, 0);
+        let delivery = 0;
+        if (fulfil === "delivery" && count > 0) {
+            delivery = CONFIG.deliveryFee;
+            if (CONFIG.freeDeliveryFrom && subtotal >= CONFIG.freeDeliveryFrom) delivery = 0;
+        }
+        return { lines, subtotal, count, delivery, total: subtotal + delivery };
+    }
+
+    function belowDeliveryMin(t) {
+        return fulfil === "delivery" && CONFIG.minDelivery > 0 && t.count > 0 && t.subtotal < CONFIG.minDelivery;
+    }
+
+    function updateCartUI() {
+        const t = totals();
+        cart = t.lines.map(({ key, id, opts, qty }) => ({ key, id, opts, qty }));
+        store.set(KEY_CART, cart);
+
+        $("cartCount").textContent = t.count;
+        $("barCount").textContent = t.count;
+        $("barTotal").textContent = money(t.total);
+        $("cartBar").classList.toggle("hidden", t.count === 0);
+        positionWhatsAppFloat();
+
+        const list = $("cartItemsList");
+        if (!t.lines.length) {
+            list.innerHTML = `<p class="text-sm text-slate-400 text-center py-8">Tu pedido está vacío.<br>Agrega platos desde la carta.</p>`;
+        } else {
+            list.innerHTML = t.lines.map(l => `
+                <div class="py-3 flex items-center gap-3">
+                    <div class="flex-1 min-w-0">
+                        <p class="font-bold text-sm text-slate-800 leading-tight">${esc(l.p.name)}</p>
+                        ${l.opts.length ? `<p class="text-xs text-red-700 font-semibold mt-0.5">${esc(l.opts.join(" + "))}</p>` : ""}
+                        <p class="text-xs text-slate-500 mt-0.5">${money(l.p.price)} c/u · <span class="font-bold text-slate-700">${money(l.p.price * l.qty)}</span></p>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <button type="button" data-qty="${esc(l.key)}" data-delta="-1" aria-label="Quitar uno de ${esc(l.p.name)}" class="w-9 h-9 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center">${ic("minus", "w-4 h-4")}</button>
+                        <span class="font-bold text-sm w-6 text-center" aria-live="polite">${l.qty}</span>
+                        <button type="button" data-qty="${esc(l.key)}" data-delta="1" aria-label="Agregar uno más de ${esc(l.p.name)}" class="w-9 h-9 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center">${ic("plus", "w-4 h-4")}</button>
+                    </div>
+                </div>`).join("");
+        }
+
+        // Sugerencia de bebida
+        const FOOD = ["caja-china", "pachamanca", "caldos"];
+        const hasFood = t.lines.some(l => FOOD.includes(l.p.category));
+        const hasDrink = t.lines.some(l => l.p.category === "bebidas");
+        const sugg = SUGGEST_DRINK_IDS.map(id => byId[id]).filter(p => p && !p.soldOut);
+        const showSugg = hasFood && !hasDrink && sugg.length;
+        $("cartSuggest").classList.toggle("hidden", !showSugg);
+        if (showSugg) {
+            $("cartSuggestBtns").innerHTML = sugg.map(p =>
+                `<button type="button" data-add="${p.id}" class="inline-flex items-center gap-1 bg-white border border-amber-300 hover:bg-amber-100 text-amber-900 text-xs font-bold px-3 min-h-10 rounded-full">${ic("plus", "w-3.5 h-3.5")} ${esc(p.name)} · ${money(p.price)}</button>`
+            ).join("");
+        }
+
+        // Totales
+        $("subtotalText").textContent = money(t.subtotal);
+        $("deliveryLabel").textContent = fulfil === "delivery" ? "Delivery (aprox. 30 min)" : "Recojo en local";
+        $("deliveryText").textContent = fulfil === "delivery" && t.count > 0 && t.delivery === 0 ? "Gratis" : money(t.delivery);
+        $("totalText").textContent = money(t.total);
+
+        const hint = $("deliveryHint");
+        if (belowDeliveryMin(t)) {
+            hint.textContent = `Pedido mínimo para delivery: ${money(CONFIG.minDelivery)}. Te faltan ${money(CONFIG.minDelivery - t.subtotal)} (o elige recojo en local).`;
+            hint.className = "text-xs text-amber-700 font-semibold";
+        } else if (fulfil === "delivery" && CONFIG.freeDeliveryFrom && t.count > 0 && t.subtotal < CONFIG.freeDeliveryFrom) {
+            hint.textContent = `Te faltan ${money(CONFIG.freeDeliveryFrom - t.subtotal)} para delivery gratis.`;
+            hint.className = "text-xs text-emerald-700 font-semibold";
+        } else {
+            hint.className = "hidden";
+        }
+
+        updateSendState();
+    }
+
+    /* ---------- Panel del pedido (celular) ---------- */
+    const isMobileLayout = () => window.innerWidth < 1024;
+    const isPanelOpen = () => !$("cartPanel").classList.contains("translate-y-full");
+
+    function openCart() {
+        $("cartPanel").classList.remove("translate-y-full", "invisible");
+        $("cartBackdrop").classList.remove("hidden");
+        if (isMobileLayout()) document.body.classList.add("overflow-hidden");
+        $("cartCloseBtn").focus({ preventScroll: true });
+    }
+    function closeCart() {
+        $("cartPanel").classList.add("translate-y-full", "invisible");
+        $("cartBackdrop").classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+    }
+
+    /* ---------- Entrega, pago y estado de envío ---------- */
+    function updateFulfilUI() {
+        document.querySelectorAll('input[name="fulfil"]').forEach(r => { r.checked = r.value === fulfil; });
+        $("addressBlock").classList.toggle("hidden", fulfil !== "delivery");
+        $("fulfilInfo").textContent = fulfil === "delivery"
+            ? `Solo entregamos en ${CONFIG.deliveryZone}.` + (CONFIG.minDelivery > 0 ? ` Pedido mínimo: ${money(CONFIG.minDelivery)}.` : "")
+            : (CONFIG.pickupAddress ? `Recoge tu pedido en: ${CONFIG.pickupAddress}. Sin costo de delivery.` : "Recoge tu pedido en el local. Sin costo de delivery.");
+        updateCartUI();
+    }
+
+    function updatePaymentUI() {
+        const pay = $("paymentMethod").value;
+        $("payDigital").classList.toggle("hidden", pay === "Efectivo");
+        $("payCash").classList.toggle("hidden", pay !== "Efectivo");
+    }
+
+    function updateStatus() {
+        const st = getStatus();
+        $("statusText").textContent = st.detail ? `${st.label} · ${st.detail}` : st.label;
+        $("statusBadge").className = "inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold " +
+            (st.open ? "bg-emerald-400 text-emerald-950" : "bg-slate-200 text-slate-800");
+        $("hdrStatus").textContent = st.open ? "Abierto ahora" : "Cerrado ahora";
+        $("hdrDot").className = "inline-block w-2 h-2 rounded-full mr-1.5 " + (st.open ? "bg-emerald-600" : "bg-red-600");
+        updateSendState();
+    }
+
+    function updateSendState() {
+        const t = totals();
+        const st = getStatus();
+        const blocked = !st.open && !CONFIG.allowOrdersWhenClosed;
+        const btn = $("sendBtn");
+        const note = $("closedNote");
+        note.classList.toggle("hidden", !blocked);
+        if (blocked) note.textContent = `Ahora estamos cerrados. ${st.detail}. Puedes armar tu pedido y enviarlo cuando abramos.`;
+        if (blocked) {
+            btn.disabled = true;
+            $("sendBtnText").textContent = "Cerrado por ahora";
+        } else if (belowDeliveryMin(t)) {
+            btn.disabled = true;
+            $("sendBtnText").textContent = `Mínimo ${money(CONFIG.minDelivery)} para delivery`;
+        } else if (t.count === 0) {
+            btn.disabled = true;
+            $("sendBtnText").textContent = "Agrega productos para continuar";
+        } else {
+            btn.disabled = false;
+            $("sendBtnText").textContent = "Enviar pedido por WhatsApp";
+        }
+    }
+
+    function positionWhatsAppFloat() {
+        const hasBar = totals().count > 0 && isMobileLayout();
+        $("waFloat").style.bottom = hasBar ? "6.5rem" : "1.25rem";
+    }
+
+    /* ---------- Datos del cliente ---------- */
+    function cleanPhone(raw) {
+        let d = raw.replace(/\D/g, "");
+        if (d.length === 11 && d.startsWith("51")) d = d.slice(2);
+        return d;
+    }
+
+    function saveCustomer() {
+        store.set(KEY_CUSTOMER, {
+            name: $("clientName").value,
+            phone: $("clientPhone").value,
+            address: $("clientAddress").value,
+            payment: $("paymentMethod").value,
+            fulfil
+        });
+    }
+
+    function showErrors(errs) {
+        ["name", "phone", "address", "zone", "cash"].forEach(k => {
+            const el = $("err-" + k);
+            if (errs[k]) { el.textContent = errs[k]; el.classList.remove("hidden"); }
+            else el.classList.add("hidden");
+        });
+    }
+
+    function validate(total) {
+        const errs = {};
+        if ($("clientName").value.trim().length < 3) errs.name = "Escribe tu nombre y apellido.";
+        if (!/^9\d{8}$/.test(cleanPhone($("clientPhone").value))) errs.phone = "Ingresa un celular de 9 dígitos que empiece con 9.";
+        if (fulfil === "delivery") {
+            if ($("clientAddress").value.trim().length < 5) errs.address = "Escribe tu dirección con una referencia.";
+            if (!$("zoneConfirm").checked) errs.zone = "Confirma que tu dirección está dentro de la zona de delivery.";
+        }
+        if ($("paymentMethod").value === "Efectivo") {
+            const raw = $("cashAmount").value.trim();
+            if (raw) {
+                const v = parseFloat(raw.replace(",", "."));
+                if (isNaN(v) || v < total) errs.cash = `El monto debe ser igual o mayor a ${money(total)}.`;
+            }
+        }
+        return errs;
+    }
+
+    /* ---------- Enviar por WhatsApp ---------- */
+    function sendToWhatsApp() {
+        const t = totals();
+        if (t.count === 0) { toast("Agrega al menos un producto", false); return; }
+
+        const st = getStatus();
+        if (!st.open && !CONFIG.allowOrdersWhenClosed) { toast(st.detail, false); return; }
+
+        if (belowDeliveryMin(t)) {
+            toast(`Para delivery el pedido mínimo es ${money(CONFIG.minDelivery)}`, false);
+            return;
+        }
+
+        if (CONFIG.minOrder && t.subtotal < CONFIG.minOrder) {
+            toast(`El pedido mínimo es ${money(CONFIG.minOrder)}`, false);
+            return;
+        }
+
+        const errs = validate(t.total);
+        showErrors(errs);
+        const firstKey = ["name", "phone", "address", "zone", "cash"].find(k => errs[k]);
+        if (firstKey) {
+            const target = { name: "clientName", phone: "clientPhone", address: "clientAddress", zone: "zoneConfirm", cash: "cashAmount" }[firstKey];
+            $(target).scrollIntoView({ behavior: "smooth", block: "center" });
+            $(target).focus({ preventScroll: true });
+            toast("Revisa los datos marcados en rojo", false);
+            return;
+        }
+
+        const name = $("clientName").value.trim();
+        const phone = cleanPhone($("clientPhone").value);
+        const payment = $("paymentMethod").value;
+        const notes = $("clientNotes").value.trim();
+
+        let msg = `*NUEVO PEDIDO - RESTAURANTE DON WALTER*\n\n`;
+        msg += `*Tipo:* ${fulfil === "delivery" ? "Delivery" : "Recojo en local"}\n`;
+        msg += `*Cliente:* ${name}\n`;
+        msg += `*Celular:* ${phone}\n`;
+        if (fulfil === "delivery") {
+            msg += `*Dirección:* ${$("clientAddress").value.trim()}\n`;
+            msg += `*Zona:* ${CONFIG.deliveryZone}\n`;
+        }
+        msg += `*Método de pago:* ${payment}\n`;
+        if (payment === "Efectivo") {
+            const raw = $("cashAmount").value.trim();
+            if (raw) {
+                const v = parseFloat(raw.replace(",", "."));
+                msg += `*Paga con:* ${money(v)} (vuelto ${money(v - t.total)})\n`;
+            }
+        } else {
+            msg += `*Pago:* enviaré la captura del ${payment} en este chat\n`;
+        }
+        if (notes) msg += `*Indicaciones especiales:* ${notes}\n`;
+
+        msg += `\n*DETALLE DEL PEDIDO:*\n`;
+        t.lines.forEach(l => {
+            const opt = l.opts.length ? ` (${l.opts.join(" + ")})` : "";
+            msg += `- ${l.qty}x ${l.p.name}${opt} - ${money(l.p.price * l.qty)}\n`;
+        });
+        msg += `\n*Subtotal:* ${money(t.subtotal)}`;
+        msg += `\n*${fulfil === "delivery" ? "Delivery" : "Recojo en local"}:* ${money(t.delivery)}`;
+        msg += `\n*TOTAL A PAGAR:* ${money(t.total)}`;
+
+        saveCustomer();
+        const url = `https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent(msg)}`;
+        const w = window.open(url, "_blank");
+        if (w) w.opener = null; else window.location.href = url;
+        toast("Se abrió WhatsApp: presiona Enviar para confirmar");
+    }
+
+    /* ---------- Eventos ---------- */
+    $("searchInput").addEventListener("input", renderMenu);
+    $("headerCartBtn").addEventListener("click", openCart);
+    $("cartBarBtn").addEventListener("click", openCart);
+    $("cartCloseBtn").addEventListener("click", closeCart);
+    $("cartBackdrop").addEventListener("click", closeCart);
+    $("clearCartBtn").addEventListener("click", clearCart);
+    $("sendBtn").addEventListener("click", sendToWhatsApp);
+
+    $("catList").addEventListener("click", e => {
+        const b = e.target.closest("[data-cat]");
+        if (b) setCategory(b.dataset.cat);
+    });
+    document.querySelector('[aria-label="Forma de ver la carta"]').addEventListener("click", e => {
+        const b = e.target.closest("[data-view]");
+        if (b) setViewMode(b.dataset.view);
+    });
+    $("menuContainer").addEventListener("click", e => {
+        const b = e.target.closest("[data-add]");
+        if (b) handleAdd(Number(b.dataset.add));
+    });
+    $("cartPanel").addEventListener("click", e => {
+        const add = e.target.closest("[data-add]");
+        if (add) { handleAdd(Number(add.dataset.add)); return; }
+        const q = e.target.closest("[data-qty]");
+        if (q) changeQty(q.dataset.qty, Number(q.dataset.delta));
+    });
+
+    document.querySelectorAll('input[name="fulfil"]').forEach(r => r.addEventListener("change", () => {
+        fulfil = r.value;
+        updateFulfilUI();
+        saveCustomer();
+    }));
+    $("paymentMethod").addEventListener("change", () => { updatePaymentUI(); saveCustomer(); });
+    ["clientName", "clientPhone", "clientAddress"].forEach(id => $(id).addEventListener("input", saveCustomer));
+    $("clientPhone").addEventListener("input", e => { e.target.value = e.target.value.replace(/[^\d\s+]/g, ""); });
+
+    document.addEventListener("keydown", e => {
+        if (e.key !== "Escape") return;
+        if (!$("optModal").classList.contains("hidden")) closeOptions();
+        else if (isMobileLayout() && isPanelOpen()) closeCart();
+    });
+
+    function setHeaderHeight() {
+        document.documentElement.style.setProperty("--hh", $("siteHeader").offsetHeight + "px");
+    }
+    window.addEventListener("resize", () => {
+        setHeaderHeight();
+        if (!isMobileLayout()) document.body.classList.remove("overflow-hidden");
+        positionWhatsAppFloat();
+    });
+    window.addEventListener("load", setHeaderHeight);
+
+    /* ---------- Inicio ---------- */
+    (function init() {
+        $("year").textContent = new Date().getFullYear();
+        $("payNumberText").textContent = CONFIG.payNumber;
+        if (CONFIG.minDelivery > 0) {
+            $("chipDelivery").textContent = `Delivery solo en Jicamarca Anexo 8 · mínimo ${money(CONFIG.minDelivery)}`;
+            $("footerDelivery").textContent += ` (pedido mínimo ${money(CONFIG.minDelivery)})`;
+        }
+        $("footerPhone").href = "tel:+" + CONFIG.phoneIntl;
+        $("footerPhoneText").textContent = "Teléfono / WhatsApp: " + CONFIG.phoneDisplay;
+        $("waFloat").href = `https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent("Hola, quisiera hacer una consulta.")}`;
+        if (CONFIG.pickupAddress) {
+            $("footerPickup").textContent = "Recojo en local: " + CONFIG.pickupAddress;
+            $("footerPickup").classList.remove("hidden");
+        }
+
+        // Carrito y datos guardados
+        const saved = store.get(KEY_CART, []);
+        cart = Array.isArray(saved) ? saved.filter(l => l && byId[l.id] && l.qty > 0 && Array.isArray(l.opts)) : [];
+        const c = store.get(KEY_CUSTOMER, {});
+        if (c.name) $("clientName").value = c.name;
+        if (c.phone) $("clientPhone").value = c.phone;
+        if (c.address) $("clientAddress").value = c.address;
+        if (["Yape", "Plin", "Efectivo"].includes(c.payment)) $("paymentMethod").value = c.payment;
+        if (c.fulfil === "pickup" || c.fulfil === "delivery") fulfil = c.fulfil;
+
+        // En celular la lista se lee mejor; en pantalla grande, la cuadrícula
+        const savedView = store.get(KEY_VIEW, null);
+        viewMode = savedView === "grid" || savedView === "list" ? savedView : (window.innerWidth < 640 ? "list" : "grid");
+
+        renderCats();
+        updatePaymentUI();
+        updateFulfilUI();
+        setViewMode(viewMode, false);
+        updateStatus();
+        setHeaderHeight();
+        setInterval(updateStatus, 60000);
+    })();
+    </script>
+</body>
+</html>
